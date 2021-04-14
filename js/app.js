@@ -27,14 +27,15 @@ for (const rBuzo of productos)
 for (const rBuzo of productos)    
     rBuzo.sumaEnvio();
 
-let filtroBuzo = prompt("Ordenar por: Marca - Precio - Talle - Color (Colocar 'No buscar' si no desea realizar una busqueda");
+let filtroBuzo = prompt("Buscar por: Marca - Precio - Talle - Color (Colocar 'No buscar' si no desea realizar una busqueda");
 
 while ( filtroBuzo != "No buscar") {
 
     switch (filtroBuzo) {
         
         case "Marca":
-            
+            const buscarMarca = productos.find(rBuzo => rBuzo.marca === "Supreme");
+            console.log(buscarMarca);
         break;
         
         case "Precio":
@@ -58,7 +59,8 @@ while ( filtroBuzo != "No buscar") {
         break;
 
         case "Color":
-            
+            const buscarColor = productos.find(rBuzo => rBuzo.color === "Blanco");
+            console.log(buscarColor);
                  
         break;
 
@@ -67,5 +69,5 @@ while ( filtroBuzo != "No buscar") {
             alert("Ordenar por: Marca - Precio - Talle - Color (Colocar 'No buscar' si no desea realizar una busqueda")
             break;
     }
-    filtroBuzo = prompt("Ordenar por: Marca - Precio - Talle - Color (Colocar 'No buscar' si no desea realizar una busqueda");
+    filtroBuzo = prompt("Buscar por: Marca - Precio - Talle - Color (Colocar 'No buscar' si no desea realizar una busqueda");
 }   
